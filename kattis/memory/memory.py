@@ -19,6 +19,9 @@
 # Tn-1 = Total of case n-1
 # Mn-1 = cases in n-1 where it's leading '1' is gone
 # Ln-1 = cases in n-1 where its leading '1' doesn't move
+#
+# Tn = Mn + Ln
+# Ln = Tn - Mn
 
 # Recursive formula:
 # Just count
@@ -30,6 +33,11 @@
 #
 # Case N:
 # Tn = Tn-1 + k(Ln-1) + (k+1)Mn-1
+#    = Tn-1 + k(Tn-1 - Mn-1) + (k+1)Mn-1
+#    ... (after factorizing)
+#    = (k+1)Tn-1 + Mn-1
+#
+# Mn = Tn - Tn-1
 #
 # Base case:
 #
