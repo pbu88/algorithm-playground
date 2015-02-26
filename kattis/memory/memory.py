@@ -48,28 +48,4 @@
 #    T0 = k+1
 #    M0 = k
 
-s = raw_input()[::-1].rstrip('0')
-if len(s) == 0:
-    print 1
-else:
-    if s[0] != '0':
-        k = 0
-        T = 1
-        M = 0
-    else:
-        k=s.find('1')
-        T = k+1
-        M = k
-
-    j = k+1
-    k = 0
-    for i in range(j, len(s)):
-        if s[i] == '0':
-            k += 1
-        else:
-            T_ = T
-            T = T_ * (k+1) + M
-            M = T - T_
-            k = 0
-
-    print T % 1000000009
+# The implementation is up to you ;)
